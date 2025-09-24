@@ -1,0 +1,1 @@
+# Torsdagsopgave-24.09.25
