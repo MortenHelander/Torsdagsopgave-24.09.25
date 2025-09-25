@@ -29,7 +29,6 @@
                     if(scan.hasNextInt()){
 
                     int input = scan.nextInt(); 
-                     System.out.println(rnd_number);
 
                      //Winning guess.
                     if(input==rnd_number){
