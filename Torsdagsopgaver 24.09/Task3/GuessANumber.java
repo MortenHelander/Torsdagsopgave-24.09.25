@@ -11,33 +11,49 @@
                     rnd_number = random.nextInt(100) + 1;
                     System.out.println( "I'm thinking of a number between 1 and 100 (including both).");
             	    System.out.println( "Can you guess what it is?...");
+
+                    //Call method.
                     makeAGuess();
 
                 }
 
 
                 private static void makeAGuess(){
+                    //Create Scanner object.
                     Scanner scan=new Scanner(System.in);
+
+                    //Increment the guess counter.
                     inputCounter++;
+
+                    //If statement to check user input.
                     if(scan.hasNextInt()){
-                    int input = scan.nextInt(); //User input.
+
+                    int input = scan.nextInt(); 
                      System.out.println(rnd_number);
+
+                     //Winning guess.
                     if(input==rnd_number){
                         System.out.println("Your guess was correct! It took you: "+ inputCounter + " tries to get here!");
 
+                                //Return is used to stop program from looping infinitly.
                                 return;   
                                    }
+                        //If input is too low.
                         else if(input<rnd_number){
                             System.out.println("Incorrect! Try a higher number!");
                         }
+
+                        //If input is too high.
                          else if(input>rnd_number){
                             System.out.println("Incorrect! Try a lower number!");
                     }
                         }
-                else{
+
+                        //If input is not a number.
+                        else{
                         System.out.println("Please only enter numbers!");
 
-     }
+     }           //Calls method again so program doesn't stop / crash.
                  makeAGuess();
             }
             }
